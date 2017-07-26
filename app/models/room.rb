@@ -13,4 +13,7 @@
 #
 
 class Room < ActiveRecord::Base
+  validates :description, length: { maximum: 2 }
+  validates :beds, numericality: true
+  validates :guests, numericality: true
 end
